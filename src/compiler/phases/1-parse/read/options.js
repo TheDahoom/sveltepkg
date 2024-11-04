@@ -29,7 +29,7 @@ export default function read_options(node) {
 
 		switch (name) {
 			case 'runes': {
-				component_options.runes = component_options.runes ? false : get_boolean_value(attribute);
+				component_options.runes = component_options.runes ? get_boolean_value(attribute) : false;
 				break;
 			}
 			case 'tag': {
