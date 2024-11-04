@@ -117,6 +117,14 @@ export class Parser {
 			this.root.start = this.root.end = null;
 		}
 
+		// Set default options
+		this.root.options = {
+			start: this.root.start,
+			end: this.root.end,
+			attributes: [],
+			runes: false
+		};
+		
 		const options_index = this.root.fragment.nodes.findIndex(
 			/** @param {any} thing */
 			(thing) => thing.type === 'SvelteOptions'
