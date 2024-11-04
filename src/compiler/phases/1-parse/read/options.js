@@ -13,7 +13,8 @@ export default function read_options(node) {
 		start: node.start,
 		end: node.end,
 		// @ts-ignore
-		attributes: node.attributes
+		attributes: node.attributes,
+		runes: false
 	};
 
 	if (!node) {
@@ -29,7 +30,7 @@ export default function read_options(node) {
 
 		switch (name) {
 			case 'runes': {
-				component_options.runes = attribute ? false : get_boolean_value(attribute);
+				component_options.runes = get_boolean_value(attribute);
 				break;
 			}
 			case 'tag': {
