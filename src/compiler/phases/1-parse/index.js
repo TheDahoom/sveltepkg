@@ -122,7 +122,9 @@ export class Parser {
 			start: this.root.start,
 			end: this.root.end,
 			attributes: [],
-			runes: false
+			runes: false,
+			//@ts-ignore
+			props: {}
 		};
 		
 		const options_index = this.root.fragment.nodes.findIndex(
