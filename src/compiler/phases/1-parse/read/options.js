@@ -13,8 +13,7 @@ export default function read_options(node) {
 		start: node.start,
 		end: node.end,
 		// @ts-ignore
-		attributes: node.attributes,
-		runes: false
+		attributes: node.attributes
 	};
 
 	if (!node) {
